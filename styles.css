@@ -7,7 +7,7 @@
   --color: #333;
 }
 body {
-  background-color: #888;
+  background-color: #555;
   font-family: "Quicksand", Times, serif;
   font-size: calc(var(--size) * 0.07);
   font-weight: 400;
@@ -30,8 +30,12 @@ body {
   height: var(--size);
   width: var(--size);
   border-radius: 100%;
-  background-color: #eee;
+  background-color: #ddd;
   border: calc(var(--size) * 0.04) solid var(--color);
+  box-shadow: -1px -1px 1px -1px hsla(0, 0%, 100%, 0.5),
+    3px 3px 4px 2px hsla(0, 0%, 10%, 50%) inset,
+    -1px -1px 1px -1px hsl(0, 0%, 100%, 1) inset,
+    3px 3px 5px hsla(0, 0%, 10%, 0.4);
 }
 
 .minutes,
@@ -171,6 +175,7 @@ body {
   left: calc(var(--size) * -0.01 / 2);
   background-color: var(--color);
   border-radius: 4px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
 }
 
 .hand::before {
