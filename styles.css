@@ -168,7 +168,7 @@ body {
   content: "";
   position: absolute;
   width: calc(var(--size) * 0.01);
-  left: calc(var(--size) * -0.005 / 2);
+  left: calc(var(--size) * -0.01 / 2);
   background-color: var(--color);
   border-radius: 4px;
 }
