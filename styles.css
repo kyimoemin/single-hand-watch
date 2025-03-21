@@ -5,6 +5,7 @@
 :root {
   --size: 300px;
   --color: #333;
+  --hand-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
 }
 body {
   background-color: #555;
@@ -175,7 +176,7 @@ body {
   left: calc(var(--size) * -0.01 / 2);
   background-color: var(--color);
   border-radius: 4px;
-  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.2);
+  box-shadow: var(--hand-shadow);
 }
 
 .hand::before {
