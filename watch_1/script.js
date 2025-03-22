@@ -30,7 +30,6 @@ function getHandShadow(degree) {
   const y = 5 * Math.cos(radians);
   const lx = 1 * Math.sin(radians);
   const ly = 1 * Math.cos(radians);
-  console.log({ lx, ly });
   return `${lx}px ${ly}px 1px -0.5px hsla(0,0%,100%,1) inset ,${x}px ${y}px 5px -1px  hsla(0, 0%, 0%, 1)`;
 }
 
