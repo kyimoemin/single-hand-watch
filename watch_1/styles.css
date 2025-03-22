@@ -4,7 +4,6 @@
   --hand-shadow: 3px 3px 5px rgba(0, 0, 0, 1);
 }
 body {
-  background-color: #555;
   font-family: "Quicksand", Times, serif;
   font-size: calc(var(--size) * 0.07);
   font-weight: 400;
