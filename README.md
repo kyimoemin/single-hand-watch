@@ -1,6 +1,6 @@
 # Single Hand Watch Face
 
-# LICENSE
+## LICENSE
 
 Copyright © 2025 Kyi Moe Min
 This watch face design is licensed under the Creative Commons Attribution-NonCommercial 4.0 International License.  
