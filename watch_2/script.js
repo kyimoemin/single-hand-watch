@@ -18,7 +18,7 @@ function rotate() {
   minuteElement.style.transform = `rotate(${minuteDegree}deg)`;
   document.documentElement.style.setProperty(
     "--hand-shadow",
-    getHandShadow(minuteDegree)
+    getHandShadow(hoursDegree)
   );
 }
 
