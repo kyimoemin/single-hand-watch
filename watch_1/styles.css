@@ -163,23 +163,14 @@ body {
   background-color: var(--color);
 }
 
-.hand::before,
-.hand::after {
+.hand::before {
   content: "";
   position: absolute;
   width: calc(var(--size) * 0.01);
+  height: calc(var(--size) * 0.5);
+  top: calc(var(--size) * -0.34);
   left: calc(var(--size) * -0.01 / 2);
   background-color: var(--color);
   border-radius: 4px;
   box-shadow: var(--hand-shadow);
-}
-
-.hand::before {
-  height: calc(var(--size) * 0.35);
-  top: calc(var(--size) * -0.34);
-}
-
-.hand::after {
-  height: calc(var(--size) * 0.16);
-  top: 0%;
 }
