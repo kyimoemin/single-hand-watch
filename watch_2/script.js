@@ -32,6 +32,7 @@ function getHandShadow(degree) {
   return `${lx}px ${ly}px 1px -0.5px hsla(0,0%,100%,1) inset ,${x}px ${y}px 5px -1px  hsla(0, 0%, 0%, 1)`;
 }
 
+rotate();
 setInterval(() => {
   rotate();
 }, 1000);
