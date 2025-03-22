@@ -6,7 +6,7 @@
 body {
   font-family: "Quicksand", Times, serif;
   font-size: calc(var(--size) * 0.05);
-  font-weight: 400;
+  font-weight: 500;
 }
 .wrapper {
   display: flex;
@@ -52,12 +52,14 @@ body {
 .hours span::after {
   content: "";
   position: absolute;
-  width: calc(var(--size) * 0.007);
-  height: calc(var(--size) * 0.04);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 0;
+  height: 0;
   background-color: var(--color);
   border-radius: 4px;
-  left: calc(var(--size) * -0.007 / 2);
-  top: calc(var(--size) * -0.04 / 2);
+  font-size: calc(var(--size) * 0.06);
 }
 .minutes span::before,
 .minutes span::after {
@@ -78,14 +80,6 @@ body {
 
 .minutes span::after {
   transform: rotate(90deg);
-}
-
-.hours span::before {
-  transform: translateY(calc(var(--size) * -0.4));
-}
-
-.hours span::after {
-  transform: translateY(calc(var(--size) * 0.4));
 }
 
 .minutes span::before {
@@ -139,6 +133,55 @@ body {
 }
 .minutes span:nth-child(6)::after {
   content: "60";
+}
+
+.hours span:nth-child(1)::before {
+  content: "1";
+  transform: translateY(calc(var(--size) * -0.4)) rotate(-30deg);
+}
+.hours span:nth-child(1)::after {
+  content: "7";
+  transform: translateY(calc(var(--size) * 0.4)) rotate(-30deg);
+}
+.hours span:nth-child(2)::before {
+  content: "2";
+  transform: translateY(calc(var(--size) * -0.4)) rotate(-60deg);
+}
+.hours span:nth-child(2)::after {
+  content: "8";
+  transform: translateY(calc(var(--size) * 0.4)) rotate(-60deg);
+}
+.hours span:nth-child(3)::before {
+  content: "3";
+  transform: translateY(calc(var(--size) * -0.4)) rotate(-90deg);
+}
+.hours span:nth-child(3)::after {
+  content: "9";
+  transform: translateY(calc(var(--size) * 0.4)) rotate(-90deg);
+}
+.hours span:nth-child(4)::before {
+  content: "4";
+  transform: translateY(calc(var(--size) * -0.4)) rotate(-120deg);
+}
+.hours span:nth-child(4)::after {
+  content: "10";
+  transform: translateY(calc(var(--size) * 0.4)) rotate(-120deg);
+}
+.hours span:nth-child(5)::before {
+  content: "5";
+  transform: translateY(calc(var(--size) * -0.4)) rotate(-150deg);
+}
+.hours span:nth-child(5)::after {
+  content: "11";
+  transform: translateY(calc(var(--size) * 0.4)) rotate(-150deg);
+}
+.hours span:nth-child(6)::before {
+  content: "6";
+  transform: translateY(calc(var(--size) * -0.4)) rotate(-180deg);
+}
+.hours span:nth-child(6)::after {
+  content: "12";
+  transform: translateY(calc(var(--size) * 0.4)) rotate(-180deg);
 }
 
 .hand {
