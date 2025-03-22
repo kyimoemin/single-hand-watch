@@ -52,11 +52,11 @@ body {
 .minutes span::after {
   content: "";
   position: absolute;
-  width: calc(var(--size) * 0.005);
+  width: calc(var(--size) * 0.007);
   height: calc(var(--size) * 0.04);
   background-color: var(--color);
   border-radius: 4px;
-  left: calc(var(--size) * -0.005 / 2);
+  left: calc(var(--size) * -0.007 / 2);
   top: calc(var(--size) * -0.04 / 2);
 }
 .hours span::before,

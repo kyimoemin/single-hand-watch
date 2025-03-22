@@ -5,10 +5,10 @@ const hand = document.querySelector(".hand");
 /**
  * @type {HTMLDivElement|null}
  */
-const hoursElement = document.querySelector(".hours");
+const minuteElement = document.querySelector(".minutes");
 
 function rotate() {
-  if (!hand || !hoursElement) throw new Error("Element not found");
+  if (!hand || !minuteElement) throw new Error("Element not found");
   const date = new Date();
   const minutes = date.getMinutes() + date.getSeconds() / 60;
   const hours = date.getHours() + minutes / 60;
@@ -16,7 +16,7 @@ function rotate() {
   const hoursDegree = 30 * (6 - hours) + minutes * 6;
 
   hand.style.transform = `rotate(${minuteDegree}deg)`;
-  hoursElement.style.transform = `rotate(${hoursDegree}deg)`;
+  // minuteElement.style.transform = `rotate(${hoursDegree}deg)`;
   document.documentElement.style.setProperty(
     "--hand-shadow",
     getHandShadow(minuteDegree)

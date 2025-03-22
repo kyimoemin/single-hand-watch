@@ -5,7 +5,7 @@
 }
 body {
   font-family: "Quicksand", Times, serif;
-  font-size: calc(var(--size) * 0.07);
+  font-size: calc(var(--size) * 0.05);
   font-weight: 400;
 }
 .wrapper {
@@ -31,8 +31,8 @@ body {
     3px 3px 5px hsla(0, 0%, 10%, 0.4);
 }
 
-.minutes,
-.hours {
+.hours,
+.minutes {
   position: absolute;
   width: 0;
   height: 0;
@@ -42,115 +42,103 @@ body {
   border-radius: 100%;
 }
 
-.minutes span {
+.hours span {
   position: absolute;
   width: 0;
   height: 0;
 }
 
-.minutes span::before,
-.minutes span::after {
-  content: "";
-  position: absolute;
-  width: calc(var(--size) * 0.005);
-  height: calc(var(--size) * 0.04);
-  background-color: var(--color);
-  border-radius: 4px;
-  left: calc(var(--size) * -0.005 / 2);
-  top: calc(var(--size) * -0.04 / 2);
-}
 .hours span::before,
 .hours span::after {
   content: "";
   position: absolute;
-  width: 0;
-  height: 0;
+  width: calc(var(--size) * 0.007);
+  height: calc(var(--size) * 0.04);
+  background-color: var(--color);
+  border-radius: 4px;
+  left: calc(var(--size) * -0.007 / 2);
+  top: calc(var(--size) * -0.04 / 2);
+}
+.minutes span::before,
+.minutes span::after {
+  content: "";
+  position: absolute;
+  width: calc(var(--size) * 0.01);
+  height: calc(var(--size) * 0.01);
+  background-color: var(--color);
+  border-radius: 4px;
+  left: calc(var(--size) * -0.01 / 2);
+  top: calc(var(--size) * -0.01 / 2);
   background-color: var(--color);
   display: flex;
   justify-content: center;
   align-items: center;
-}
-
-.hours span::after {
-  transform: rotate(90deg);
-}
-
-.minutes span::before {
-  transform: translateY(calc(var(--size) * -0.4));
+  line-height: 2rem;
 }
 
 .minutes span::after {
-  transform: translateY(calc(var(--size) * 0.4));
+  transform: rotate(90deg);
 }
 
 .hours span::before {
-  transform: translateY(calc(var(--size) * -0.2));
+  transform: translateY(calc(var(--size) * -0.4));
 }
 
 .hours span::after {
+  transform: translateY(calc(var(--size) * 0.4));
+}
+
+.minutes span::before {
+  transform: translateY(calc(var(--size) * -0.2));
+}
+
+.minutes span::after {
   transform: translateY(calc(var(--size) * 0.2)) rotate(180deg);
 }
 
-.minutes span:nth-child(1),
-.hours span:nth-child(1) {
+.hours span:nth-child(1),
+.minutes span:nth-child(1) {
   transform: rotate(30deg);
 }
-.minutes span:nth-child(2),
-.hours span:nth-child(2) {
+.hours span:nth-child(2),
+.minutes span:nth-child(2) {
   transform: rotate(60deg);
 }
-.minutes span:nth-child(3),
-.hours span:nth-child(3) {
+.hours span:nth-child(3),
+.minutes span:nth-child(3) {
   transform: rotate(90deg);
 }
-.minutes span:nth-child(4),
-.hours span:nth-child(4) {
+.hours span:nth-child(4),
+.minutes span:nth-child(4) {
   transform: rotate(120deg);
 }
-.minutes span:nth-child(5),
-.hours span:nth-child(5) {
+.hours span:nth-child(5),
+.minutes span:nth-child(5) {
   transform: rotate(150deg);
 }
-.minutes span:nth-child(6),
-.hours span:nth-child(6) {
+.hours span:nth-child(6),
+.minutes span:nth-child(6) {
   transform: rotate(180deg);
 }
 
-.hours span:nth-child(1)::before {
-  content: "1";
+.minutes span:nth-child(3)::before,
+.minutes span:nth-child(3)::after,
+.minutes span:nth-child(6)::before,
+.minutes span:nth-child(6)::after {
+  align-items: flex-start;
 }
-.hours span:nth-child(1)::after {
-  content: "7";
+
+.minutes span:nth-child(3)::before {
+  content: "15";
 }
-.hours span:nth-child(2)::before {
-  content: "2";
+.minutes span:nth-child(3)::after {
+  content: "45";
 }
-.hours span:nth-child(2)::after {
-  content: "8";
+.minutes span:nth-child(6)::before {
+  content: "30";
 }
-.hours span:nth-child(3)::before {
-  content: "3";
-}
-.hours span:nth-child(3)::after {
-  content: "9";
-}
-.hours span:nth-child(4)::before {
-  content: "4";
-}
-.hours span:nth-child(4)::after {
-  content: "10";
-}
-.hours span:nth-child(5)::before {
-  content: "5";
-}
-.hours span:nth-child(5)::after {
-  content: "11";
-}
-.hours span:nth-child(6)::before {
-  content: "6";
-}
-.hours span:nth-child(6)::after {
-  content: "12";
+.minutes span:nth-child(6)::after {
+  content: "60";
 }
 
 .hand {
