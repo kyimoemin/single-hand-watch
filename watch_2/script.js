@@ -12,11 +12,11 @@ function rotate() {
   const date = new Date();
   const minutes = date.getMinutes() + date.getSeconds() / 60;
   const hours = date.getHours() + minutes / 60;
-  const minuteDegree = minutes * 6;
-  const hoursDegree = 30 * (6 - hours) + minutes * 6;
+  const hoursDegree = hours * 30;
+  const minuteDegree = minutes * 6 + (6 - hours) * 30;
 
-  hand.style.transform = `rotate(${minuteDegree}deg)`;
-  // minuteElement.style.transform = `rotate(${hoursDegree}deg)`;
+  hand.style.transform = `rotate(${hoursDegree}deg)`;
+  minuteElement.style.transform = `rotate(${minuteDegree}deg)`;
   document.documentElement.style.setProperty(
     "--hand-shadow",
     getHandShadow(minuteDegree)
