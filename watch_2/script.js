@@ -10,11 +10,10 @@ const minuteElement = document.querySelector(".minutes");
 function rotate() {
   if (!hand || !minuteElement) throw new Error("Element not found");
   const date = new Date();
-  const minutes = date.getMinutes() + date.getSeconds() / 60;
-  const hours = date.getHours() + minutes / 60;
+  const minutes = 10; // date.getMinutes() + date.getSeconds() / 60;
+  const hours = 1; //date.getHours() + minutes / 60;
   const hoursDegree = hours * 30;
-  const minuteDegree = minutes * 6;
-
+  const minuteDegree = 180 + hoursDegree - minutes * 6;
   hand.style.transform = `rotate(${hoursDegree}deg)`;
   minuteElement.style.transform = `rotate(${minuteDegree}deg)`;
   document.documentElement.style.setProperty(
